@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        tools:context=".Activity.Group_maker">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+            <EditText
+                android:id="@+id/roomid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorblack"
+                android:textColorHint="@color/colorblack"
+                android:hint="@string/room_id"/>
+            <EditText
+                android:id="@+id/receverid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorblack"
+                android:textColorHint="@color/colorblack"
+                android:hint="@string/recever"/>
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorblack"
+                android:textColorHint="@color/colorblack"
+                android:hint="@string/name"/>
+            <Button
+                android:id="@+id/btngroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorwhite"
+                android:background="@color/colorPrimary"
+                android:layout_marginTop="10dp"
+                android:text="@string/group_make"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+</layout>

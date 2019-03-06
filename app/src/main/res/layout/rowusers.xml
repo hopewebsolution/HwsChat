@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|start"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".15"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/userimg"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/defult"
+                    android:padding="1dp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".85"
+                android:orientation="vertical"
+                android:layout_marginLeft="5dp"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/tvname"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".50"
+                    android:gravity="center|start"
+                    android:textColor="@color/colorblack"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvlastmsg"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".50"
+                    android:gravity="center|start|top"
+                    android:singleLine="true"
+                    android:textColor="@color/colorblack"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colordarkgray" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/counter"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:textColor="@color/colorwhite"
+                android:layout_gravity="center"
+                android:layout_weight=".10"
+                android:visibility="visible"
+                android:background="@drawable/border_send"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:emojicon="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/back"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:id="@+id/loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/button_border_chat"
+            android:elevation="5dp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/headr"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center|start"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:padding="10dp"
+                app:srcCompat="@drawable/ic_arrow_back" />
+
+            <FrameLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/userprofile"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:padding="1dp"
+                    android:src="@drawable/defult" />
+
+                <ImageView
+                    android:id="@+id/onlinestatus"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="bottom|right"
+                    android:layout_marginLeft="-10dp"
+                    android:src="@drawable/offline" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="5dp">
+
+                <TextView
+                    android:id="@+id/uname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dummy_user"
+                    android:textColor="@color/colorwhite"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/ustatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/online"
+                    android:textColor="@color/colorwhite"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/Rvacc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/msg_box"
+            android:layout_below="@+id/headr" />
+
+        <LinearLayout
+            android:id="@+id/msg_box"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="5dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight=".98"
+                android:background="@drawable/button_border_chat"
+                android:weightSum="1">
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:id="@+id/progress"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:paddingLeft="10dp"
+                    android:src="@drawable/recording"
+                    android:visibility="gone" />
+
+                <EditText
+                    android:id="@+id/edtmsg1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".80"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/message"
+                    android:inputType="textShortMessage"
+                    android:paddingLeft="20dp"
+                    android:textColorHint="@color/colordarkgray" />
+
+                <LinearLayout
+                    android:id="@+id/other"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".10"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp"
+                        app:srcCompat="@drawable/ic_paperclip_document_outline" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/emoji"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight=".10"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    emojicon:emojiconUseSystemDefault="true">
+
+                    <ImageView
+                        contentPadding="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp"
+                        app:srcCompat="@drawable/ic_emoji" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".02" />
+
+            <ImageView
+                android:id="@+id/sendmsg"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/border_send"
+                android:scaleType="centerInside"
+                android:visibility="gone"
+                app:srcCompat="@drawable/ic_send" />
+
+
+            <ImageView
+                android:id="@+id/record"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/border_send"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/ic_mic" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

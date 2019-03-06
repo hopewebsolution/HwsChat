@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Hws Chat</string>
+    <!-- Strings related to login -->
+    <string name="online">Online</string>
+    <string name="dummy_user">Kamal Ashiwal</string>
+    <string name="chat_user">chat_user</string>
+    <string name="message">Type message</string>
+    <string name="required_detail">required_detail</string>
+    <string name="group">group</string>
+    <string name="room_id">Room id</string>
+    <string name="recever">Recever id</string>
+    <string name="name">Name</string>
+    <string name="group_make">Make Group</string>
+    <string name="user">user</string>
+
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="unread">unread</string>
+</resources>
